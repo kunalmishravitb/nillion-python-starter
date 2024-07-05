@@ -1,3 +1,11 @@
+"""
+In this example, we:
+1. connect to the local nillion-devnet
+2. store the secret addition program
+3. store a secret to be used in the computation
+4. compute the secret addition program with the stored secret and another computation time secret
+"""
+
 import asyncio
 import py_nillion_client as nillion
 import os
@@ -33,8 +41,7 @@ async def main():
 
     # 3. Pay for and store the program
     # Set the program name and path to the compiled program
-    program_name = "secret_addition_complete"
-    #program_mir_path = f"../nada_quickstart_programs/target/{program_name}.nada.bin"
+    program_name = "secret_voting_program"
     program_mir_path = f"/content/nillion-python-starter/quickstart/nada_quickstart_programs/target/main.nada.bin"
 
     # Create payments config, client and wallet
